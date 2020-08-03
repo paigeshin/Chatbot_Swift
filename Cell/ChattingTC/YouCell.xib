@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YouCell" rowHeight="187" id="KGk-i7-Jjw" customClass="YouCell" customModule="ume" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1729" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="1729" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDZ-ec-BDc" userLabel="ChattingBubble">
+                        <rect key="frame" x="20" y="10" width="114.5" height="167"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfasdfasdf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-3F-oBL" userLabel="ChattingTextLabel">
+                                <rect key="frame" x="10" y="10" width="94.5" height="147"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="chattingText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="chattingChatBot"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ref-3F-oBL" secondAttribute="bottom" constant="10" id="Ad5-5V-dne"/>
+                            <constraint firstItem="Ref-3F-oBL" firstAttribute="top" secondItem="VDZ-ec-BDc" secondAttribute="top" constant="10" id="Azq-WQ-8q7"/>
+                            <constraint firstItem="Ref-3F-oBL" firstAttribute="leading" secondItem="VDZ-ec-BDc" secondAttribute="leading" constant="10" id="FrZ-dV-9ce"/>
+                            <constraint firstAttribute="trailing" secondItem="Ref-3F-oBL" secondAttribute="trailing" constant="10" id="Pme-ik-mNm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="VDZ-ec-BDc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3Re-YC-Wu8"/>
+                    <constraint firstItem="VDZ-ec-BDc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="H06-lx-8B5"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VDZ-ec-BDc" secondAttribute="trailing" constant="160" id="Huz-YE-Ysq"/>
+                    <constraint firstAttribute="bottom" secondItem="VDZ-ec-BDc" secondAttribute="bottom" constant="10" id="xQX-9x-XER"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chattingBubble" destination="VDZ-ec-BDc" id="Xn9-6i-rKI"/>
+                <outlet property="chattingTextLabel" destination="Ref-3F-oBL" id="6s8-Fg-vTc"/>
+                <outlet property="youCellRightConstraint" destination="Huz-YE-Ysq" id="bwC-Bg-gR3"/>
+            </connections>
+            <point key="canvasLocation" x="1312.3188405797102" y="382.70089285714283"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="chattingChatBot">
+            <color red="0.89411764705882357" green="0.94901960784313721" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="chattingText">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

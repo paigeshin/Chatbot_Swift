@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChattingVC-->
+        <scene sceneID="oHt-xU-ywh">
+            <objects>
+                <viewController storyboardIdentifier="ChattingVC" id="6Sg-ew-Di5" customClass="ChattingVC" customModule="ume" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="swZ-4Y-8K2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rs7-hj-EP1" userLabel="ChattingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pAy-hc-XOH">
+                                        <rect key="frame" x="0.0" y="24" width="414" height="657.66666666666663"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ej1-Zp-DYg">
+                                        <rect key="frame" x="0.0" y="681.66666666666663" width="414" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="5m9-Tc-haz"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="28e-84-ldh">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-ZZ-Xqw" userLabel="TextBoxContainer">
+                                        <rect key="frame" x="0.0" y="761.66666666666663" width="414" height="134.33333333333337"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HTx-Wi-8Rp">
+                                                <rect key="frame" x="24" y="16" width="332" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fit-Xe-uKo">
+                                                <rect key="frame" x="364" y="16" width="34" height="34"/>
+                                                <state key="normal" image="chat_send"/>
+                                                <connections>
+                                                    <action selector="sendButtonPressed:" destination="6Sg-ew-Di5" eventType="touchUpInside" id="Hjl-W9-N7P"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="grayNormal"/>
+                                        <constraints>
+                                            <constraint firstItem="HTx-Wi-8Rp" firstAttribute="leading" secondItem="Gj8-ZZ-Xqw" secondAttribute="leading" constant="24" id="Da5-Sm-f3k"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fit-Xe-uKo" secondAttribute="trailing" constant="16" id="Hrv-8X-MTO"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HTx-Wi-8Rp" secondAttribute="bottom" constant="16" id="XZh-De-5jL"/>
+                                            <constraint firstItem="HTx-Wi-8Rp" firstAttribute="top" secondItem="Gj8-ZZ-Xqw" secondAttribute="top" constant="16" id="Xvb-Fl-N7X"/>
+                                            <constraint firstItem="Fit-Xe-uKo" firstAttribute="centerY" secondItem="HTx-Wi-8Rp" secondAttribute="centerY" id="kkO-0X-mIH"/>
+                                            <constraint firstItem="Fit-Xe-uKo" firstAttribute="leading" secondItem="HTx-Wi-8Rp" secondAttribute="trailing" constant="8" id="kz8-TH-Ok0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pAy-hc-XOH" firstAttribute="leading" secondItem="Rs7-hj-EP1" secondAttribute="leading" id="5jE-0M-vCK"/>
+                                    <constraint firstItem="Gj8-ZZ-Xqw" firstAttribute="top" secondItem="Ej1-Zp-DYg" secondAttribute="bottom" id="6tz-5h-RaB"/>
+                                    <constraint firstAttribute="height" constant="896" id="H1p-Bz-g8u"/>
+                                    <constraint firstItem="Gj8-ZZ-Xqw" firstAttribute="height" secondItem="Rs7-hj-EP1" secondAttribute="height" multiplier="0.15" id="K89-uL-4Nk"/>
+                                    <constraint firstItem="pAy-hc-XOH" firstAttribute="top" secondItem="Rs7-hj-EP1" secondAttribute="top" constant="24" id="RJe-J4-d54"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ej1-Zp-DYg" secondAttribute="trailing" id="WfV-Db-HcP"/>
+                                    <constraint firstItem="Ej1-Zp-DYg" firstAttribute="leading" secondItem="Rs7-hj-EP1" secondAttribute="leading" id="h72-4f-pPn"/>
+                                    <constraint firstAttribute="trailing" secondItem="pAy-hc-XOH" secondAttribute="trailing" id="hXR-cC-gRO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gj8-ZZ-Xqw" secondAttribute="bottom" id="ird-G3-pED"/>
+                                    <constraint firstItem="Gj8-ZZ-Xqw" firstAttribute="leading" secondItem="Rs7-hj-EP1" secondAttribute="leading" id="pE0-bf-bHH"/>
+                                    <constraint firstItem="Ej1-Zp-DYg" firstAttribute="top" secondItem="pAy-hc-XOH" secondAttribute="bottom" id="shE-Mx-AhL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gj8-ZZ-Xqw" secondAttribute="trailing" id="zYS-lq-wYX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Rs7-hj-EP1" firstAttribute="trailing" secondItem="0k2-Rq-biu" secondAttribute="trailing" id="TIx-nf-ZSE"/>
+                            <constraint firstItem="Rs7-hj-EP1" firstAttribute="leading" secondItem="0k2-Rq-biu" secondAttribute="leading" id="W2y-Xv-Cr2"/>
+                            <constraint firstAttribute="bottom" secondItem="Rs7-hj-EP1" secondAttribute="bottom" id="aD8-z6-qeZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0k2-Rq-biu"/>
+                    </view>
+                    <connections>
+                        <outlet property="chattingView" destination="Rs7-hj-EP1" id="EOb-tb-ImZ"/>
+                        <outlet property="chattingViewHeightConstraint" destination="H1p-Bz-g8u" id="OGw-qS-Vf1"/>
+                        <outlet property="collectionView" destination="Ej1-Zp-DYg" id="qk7-pb-3mf"/>
+                        <outlet property="collectionViewHeightConstraint" destination="5m9-Tc-haz" id="o31-XY-KGW"/>
+                        <outlet property="inputTextBoxBottomConstraint" destination="ird-G3-pED" id="1v9-3R-Y1Z"/>
+                        <outlet property="inputTextBoxConatinerView" destination="Gj8-ZZ-Xqw" id="C9j-KN-dFm"/>
+                        <outlet property="inputTextField" destination="HTx-Wi-8Rp" id="Yuw-xE-kmL"/>
+                        <outlet property="sendButton" destination="Fit-Xe-uKo" id="zHD-NU-ASf"/>
+                        <outlet property="tableView" destination="pAy-hc-XOH" id="rHk-lm-w1T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTN-ve-chT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215.94202898550725" y="-132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat_send" width="34" height="34"/>
+        <namedColor name="grayNormal">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCC" id="gTV-IL-0wX" customClass="ButtonCC" customModule="ume" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="168"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJm-QB-fvg">
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="168"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIR-8g-NaS">
+                                <rect key="frame" x="16" y="8" width="306" height="152"/>
+                                <color key="backgroundColor" name="ice"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="darkGreenBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="ice"/>
+                        <constraints>
+                            <constraint firstItem="ZIR-8g-NaS" firstAttribute="leading" secondItem="TJm-QB-fvg" secondAttribute="leading" constant="16" id="1fW-4q-cif"/>
+                            <constraint firstAttribute="trailing" secondItem="ZIR-8g-NaS" secondAttribute="trailing" constant="16" id="5D2-Ik-0On"/>
+                            <constraint firstItem="ZIR-8g-NaS" firstAttribute="top" secondItem="TJm-QB-fvg" secondAttribute="top" constant="8" id="krB-gu-1eT"/>
+                            <constraint firstAttribute="bottom" secondItem="ZIR-8g-NaS" secondAttribute="bottom" constant="8" id="rLu-TZ-Ac7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TJm-QB-fvg" secondAttribute="bottom" id="8fY-sY-WgY"/>
+                <constraint firstItem="TJm-QB-fvg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FoU-71-3wT"/>
+                <constraint firstAttribute="trailing" secondItem="TJm-QB-fvg" secondAttribute="trailing" id="K1k-AS-vhO"/>
+                <constraint firstItem="TJm-QB-fvg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jOe-9Y-6r0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="338" height="168"/>
+            <connections>
+                <outlet property="chattingButtonContainerView" destination="TJm-QB-fvg" id="InD-cG-hcz"/>
+                <outlet property="chattingButtonLabel" destination="ZIR-8g-NaS" id="1vl-7j-DWE"/>
+            </connections>
+            <point key="canvasLocation" x="342.02898550724638" y="194.86607142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="darkGreenBlue">
+            <color red="0.14117647058823529" green="0.37647058823529411" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ice">
+            <color red="0.93725490196078431" green="0.96078431372549022" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
